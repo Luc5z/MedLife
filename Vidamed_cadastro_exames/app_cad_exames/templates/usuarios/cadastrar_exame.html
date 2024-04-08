@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Exames</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #056005;
+            color: #fff;
+        }
+
+        .navbar-brand h3 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #056005;
+            border-color: #056005;
+        }
+
+        .btn-primary:hover {
+            background-color: #035003;
+            border-color: #035003;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><h3 style='font-family: "Rubik", sans-serif;'> Cadastro de Exames </h3></span>
+            <img src="https://logo.unama.br/img/png/unama.png" alt="">
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="nome_exame" class="form-label">Nome do exame:</label>
+                <select class="form-select" id="nome_exame" name="nome_exame">
+                    <option value="Ressonância Magnética">Ressonância Magnética</option>
+                    <option value="Tomografia Computadorizada">Tomografia Computadorizada</option>
+                    <option value="Ecocardiograma">Ecocardiograma</option>
+                    <option value="Endoscopia">Endoscopia</option>
+                    <option value="Colonoscopia">Colonoscopia</option>
+                    <option value="Exame de Sangue">Exame de Sangue</option>
+                    <option value="Ultrassonografia">Ultrassonografia</option>
+                    <option value="Radiografia">Radiografia</option>
+                    <option value="Eletrocardiograma">Eletrocardiograma</option>
+                    <option value="Teste de Estresse">Teste de Estresse</option>
+                    <option value="Eletroencefalograma">Eletroencefalograma</option>
+                    <option value="Mamografia">Mamografia</option>
+                    <option value="Densitometria Óssea">Densitometria Óssea</option>
+                    <option value="Teste Ergométrico">Teste Ergométrico</option>
+                    <option value="Holter 24 Horas">Holter 24 Horas</option>
+                    <option value="Urografia Excretora">Urografia Excretora</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="data_exame" class="form-label">Data do exame:</label>
+                <input type="date" class="form-control" id="data_exame" name="data_exame">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Seu e-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        
+        
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

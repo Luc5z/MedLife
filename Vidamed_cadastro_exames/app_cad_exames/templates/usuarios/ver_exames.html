@@ -1,0 +1,23 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="email">Digite seu e-mail:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">Enviar</button>
+</form>
+
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>nome do exame</th>
+            <th>data do exame</th>
+        </tr>
+        {% for exame in exames %}
+        <tr>
+            <td>{{ exame.id_exame }}</td>
+            <td>{{ exame.nome_exame }}</td>
+            <td>{{ exame.data_exame }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
