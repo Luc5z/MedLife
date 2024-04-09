@@ -27,9 +27,6 @@ def cadastrar_exame(request):
 def home(request):
     return render(request, 'usuarios/home.html')
 
-def cadastrar_me(request):
-    return render(request, 'usuarios/cadastrar_me.html')
-
 def ver_exames(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -40,9 +37,10 @@ def ver_exames(request):
         if usuario:
             # Se o usuário existir, filtrar os exames associados a ele
             exames = Exame.objects.filter(usuario=usuario)
-            return render(request, 'usuarios/ver_exames.html', {'exames': exames})
+            return render(request, 'usuarios/ver_exames.html', {'exames': exames, 'usuario': usuario})
+
         else:
-            # Caso o usuário não exista, você pode lidar com isso aqui
+            # Caso o usuário não exista
             return render(request, 'usuarios/ver_exames.html', {'error_message': 'Usuário não encontrado'})
 
     else:
@@ -55,6 +53,9 @@ def cadastrar_me(request):
         novo_usuario.email = request.POST.get('email')
         novo_usuario.senha = request.POST.get('senha')
         novo_usuario.save()
+        return render(request, 'usuarios/home.html')
+        
+
     return render(request, 'usuarios/cadastrar_me.html')
 
 def exames(request):

@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "Vidamed_cadastro_exames.urls"
+ROOT_URLCONF = "MedLife_cadastro_exames.urls"
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "Vidamed_cadastro_exames.wsgi.application"
+WSGI_APPLICATION = "MedLife_cadastro_exames.wsgi.application"
 
 
 # Database

@@ -1,5 +1,5 @@
 """
-WSGI config for Vidamed_cadastro_exames project.
+WSGI config for MedLife_cadastro_exames project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Vidamed_cadastro_exames.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "MedLife_cadastro_exames.settings")
 
 application = get_wsgi_application()
