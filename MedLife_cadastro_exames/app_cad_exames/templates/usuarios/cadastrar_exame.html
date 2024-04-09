@@ -18,15 +18,19 @@
             background-color: #056005;
             color: #fff;
         }
+        .navbar {
+            background-color: #014040;
+        }
+
+        .navbar-brand h1 {
+            color: #fff;
+            font-size: 2.3rem;
+            padding-left: 20px;
+        }
 
         .navbar-brand h3 {
             margin: 0;
             padding: 10px;
-        }
-
-        img {
-            height: 50px;
-            margin-right: 20px;
         }
 
         .container {
@@ -51,6 +55,10 @@
             background-color: #035003;
             border-color: #035003;
         }
+        img{
+            width: 110px;
+            margin-right: 20px;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,15 +67,15 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" color: aliceblue;">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1"><h3 style='font-family: "Rubik", sans-serif;'> Cadastro de Exames </h3></span>
-            <img src="https://logo.unama.br/img/png/unama.png" alt="">
+          <span class="navbar-brand mb-0 h1"><h1 style='font-family: "Rubik", sans-serif;'> Agendar Exame </h1></span>
+          <img class="img-logo" style="cursor: pointer;" src="https://i.ibb.co/b1PMhMP/imagem-2024-04-08-222604197.png" onclick="window.location.href = '/';" alt="">
         </div>
     </nav>
 
     <div class="container">
-
+        <p style="color: #ff0000;"> {{ error_message }} </p>
         <form method="post">
             {% csrf_token %}
             <div class="mb-3">
@@ -93,13 +101,13 @@
             </div>
             <div class="mb-3">
                 <label for="data_exame" class="form-label">Data do exame:</label>
-                <input type="date" class="form-control" id="data_exame" name="data_exame">
+                <input type="date" class="form-control" id="data_exame" name="data_exame" required="True">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Seu e-mail:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required="True">
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" style="background-color: #014040; color: #fff;" class="btn">Enviar</button>
         </form>
         
         

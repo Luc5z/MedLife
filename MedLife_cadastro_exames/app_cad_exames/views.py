@@ -17,9 +17,8 @@ def cadastrar_exame(request):
             novo_exame.save()
             return redirect('ver_exames')
         else:
-            # Lidar com o caso em que o usuário não existe
-            # Você pode mostrar uma mensagem de erro ou criar um novo usuário, dependendo da sua lógica de negócios
-            return render(request, 'usuarios/home.html')
+                
+            return render(request, 'usuarios/cadastrar_exame.html', {'error_message': 'Usuário não encontrado'})
     else:
         return render(request, 'usuarios/cadastrar_exame.html')
 
