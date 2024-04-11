@@ -1,14 +1,21 @@
-# MedLife
+<h1 align="center"> MedLife </h1>
 
 <p align="center">
-Aplicativo Web desenvolvido em Django simulando um portal de saúde para agendamento de exames médicos.
+Sistema desenvolvido em Django para Web que simula um site de clínica laboratorial, criado por mim, Dival Lucas.
 </p>
 
-## 💻 Tecnologias Utilizadas
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+## 💻 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Python (Django)
 - HTML e CSS
 - Bootstrap
 - Git e Github
+
+## 📑 Licença
+
+Esse projeto está sob a licença MIT.
+
+---
